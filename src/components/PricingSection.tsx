@@ -1,5 +1,8 @@
 import { Check, Crown, Gift } from "lucide-react";
 import productBundle from "@/assets/product-bundle.png";
+import product1Pot from "@/assets/product-1pot.png";
+import product3Pots from "@/assets/product-3pots.png";
+import product5Pots from "@/assets/product-5pots.png";
 import CTAButton from "./CTAButton";
 
 const bonuses = [
