@@ -96,33 +96,25 @@ const PricingSection = () => {
               <ul className="space-y-2 text-sm">
                 <li className="flex items-center gap-2"><Check className="w-4 h-4 text-accent" /> Frete Grátis</li>
                 <li className="flex items-center gap-2"><Check className="w-4 h-4 text-accent" /> Garantia 30 dias</li>
-                {plan.bottles >= 3 &&
-              <li className="flex items-center gap-2"><Gift className="w-4 h-4 text-primary" /> 3 Bônus Digitais</li>
-              }
               </ul>
+
+              {plan.bottles >= 3 && (
+                <div className="space-y-2 border-t border-border pt-4">
+                  <p className="text-xs font-bold text-primary flex items-center gap-1.5">
+                    <Gift className="w-4 h-4" /> BÔNUS INCLUSOS:
+                  </p>
+                  {bonuses.map((b, i) => (
+                    <div key={i} className="flex items-center justify-between text-xs">
+                      <span className="text-muted-foreground">{b.name}</span>
+                      <span><span className="line-through text-muted-foreground/60">{b.value}</span> <span className="text-accent font-bold">GRÁTIS</span></span>
+                    </div>
+                  ))}
+                </div>
+              )}
 
               <CTAButton className="text-base py-3" />
             </div>
           )}
-        </div>
-
-        {/* Bonuses */}
-        <div className="max-w-3xl mx-auto bg-card border border-primary/20 rounded-2xl p-6 md:p-8 space-y-4">
-          <div className="text-center">
-            <h3 className="text-xl md:text-2xl font-bold">
-              <Gift className="w-6 h-6 text-primary inline mr-2" />
-              VALOR ACUMULADO EM BÔNUS: <span className="text-gradient-gold">R$ 421</span>
-            </h3>
-            <p className="text-sm text-muted-foreground mt-1">Grátis nos kits de 3 e 5 potes</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            {bonuses.map((b, i) =>
-            <div key={i} className="bg-secondary rounded-xl p-4 text-center space-y-1">
-                <p className="text-sm font-semibold text-foreground">{b.name}</p>
-                <p className="text-xs text-muted-foreground">Valor: <span className="line-through">{b.value}</span> → <span className="text-accent font-bold">GRÁTIS</span></p>
-              </div>
-            )}
-          </div>
         </div>
 
         {/* Bundle image */}
