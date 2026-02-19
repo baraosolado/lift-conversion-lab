@@ -38,15 +38,15 @@ const HeroSection = () => {
           {/* Product image */}
           <div className="flex-1 flex justify-center">
             <img
-              src={productHero}
+
               alt="Lift Detox Black - Suplemento Premium"
-              className="w-72 md:w-96 drop-shadow-2xl animate-float"
-            />
+              className="w-72 md:w-96 drop-shadow-2xl animate-float" src="/lovable-uploads/9cfa01db-4dea-4551-8b17-8412a9eef4d1.png" />
+
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
