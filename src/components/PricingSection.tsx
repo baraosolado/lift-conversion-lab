@@ -19,7 +19,8 @@ const plans = [
   originalPrice: "297",
   perBottle: "197",
   popular: false,
-  savings: null
+  savings: null,
+  image: product1Pot
 },
 {
   bottles: 3,
@@ -28,7 +29,8 @@ const plans = [
   originalPrice: "891",
   perBottle: "147",
   popular: false,
-  savings: "Economize R$ 450"
+  savings: "Economize R$ 450",
+  image: product3Pots
 },
 {
   bottles: 5,
@@ -37,7 +39,8 @@ const plans = [
   originalPrice: "1.485",
   perBottle: "117",
   popular: true,
-  savings: "Economize R$ 900"
+  savings: "Economize R$ 900",
+  image: product5Pots
 }];
 
 
