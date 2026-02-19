@@ -1,5 +1,8 @@
 import { Check, Crown, Gift } from "lucide-react";
 import productBundle from "@/assets/product-bundle.png";
+import product1Pot from "@/assets/product-1pot.png";
+import product3Pots from "@/assets/product-3pots.png";
+import product5Pots from "@/assets/product-5pots.png";
 import CTAButton from "./CTAButton";
 
 const bonuses = [
@@ -16,7 +19,8 @@ const plans = [
   originalPrice: "297",
   perBottle: "197",
   popular: false,
-  savings: null
+  savings: null,
+  image: product1Pot
 },
 {
   bottles: 3,
@@ -25,7 +29,8 @@ const plans = [
   originalPrice: "891",
   perBottle: "147",
   popular: false,
-  savings: "Economize R$ 450"
+  savings: "Economize R$ 450",
+  image: product3Pots
 },
 {
   bottles: 5,
@@ -34,7 +39,8 @@ const plans = [
   originalPrice: "1.485",
   perBottle: "117",
   popular: true,
-  savings: "Economize R$ 900"
+  savings: "Economize R$ 900",
+  image: product5Pots
 }];
 
 
@@ -64,6 +70,10 @@ const PricingSection = () => {
                   <Crown className="w-4 h-4" /> MAIS VENDIDO
                 </div>
             }
+
+              <div className="flex justify-center">
+                <img src={plan.image} alt={`${plan.bottles} ${plan.bottles === 1 ? "pote" : "potes"} Lift Detox Black`} className="h-36 md:h-44 object-contain" />
+              </div>
 
               <div className="text-center space-y-2">
                 <h3 className="font-display text-xl font-bold">{plan.title}</h3>
