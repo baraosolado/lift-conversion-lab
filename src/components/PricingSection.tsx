@@ -71,6 +71,10 @@ const PricingSection = () => {
                 </div>
             }
 
+              <div className="flex justify-center">
+                <img src={plan.image} alt={`${plan.bottles} ${plan.bottles === 1 ? "pote" : "potes"} Lift Detox Black`} className="h-36 md:h-44 object-contain" />
+              </div>
+
               <div className="text-center space-y-2">
                 <h3 className="font-display text-xl font-bold">{plan.title}</h3>
                 <p className="text-muted-foreground">{plan.bottles} {plan.bottles === 1 ? "pote" : "potes"}</p>
